@@ -1,0 +1,15 @@
+<%= link_to "Shorten URL", action: "new", controller: "urls" %>
+<table>
+    <tr>
+        <th>long_url</th>
+        <th>short_url</th>
+    </tr>
+
+    <% @url.each do |url| %>
+        <tr>
+            <td><%= link_to url.long_url, url_path(url.id) %></td>
+            <td><%= url.short_url %></td>
+        </tr>
+        <%end%>
+</table>
+</div>
